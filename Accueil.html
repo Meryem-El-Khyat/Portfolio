@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>PortFolio</title>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+      <h1>Meryem Elkhyat</h1>
+    </div>
+    
+    <nav>
+      <div class="menu-icon">
+        <!-- Insérez ici votre icône de menu (peut être une image ou une icône SVG) -->
+        <!-- Exemple d'utilisation d'une icône de hamburger -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </div>
+      
+      <ul class="nav">
+        <li><a href="Accueil.html"><h4>Accueil</h4></a></li>
+        <li><a href="Cv.html"><h4>Cv</h4></a></li>
+        <li><a href="Project.html"><h4>Projects</h4></a></li>
+        <li><a href="Contact.html"><h4>Contact</h4></a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+    <div class="profile-container">
+        <div class="profile-photo">
+          <!-- Assurez-vous d'avoir le droit d'utiliser l'image ou remplacez par une image libre de droits -->
+          <img src="images/8b2e6e84-4867-4d90-8885-4500ace689e3.jpg" alt="Photo de profil">
+        </div>
+        <div class="profile-content">
+          <h1>Salut</h1>
+          <h2>À propos de moi</h2>
+          <p>Paragraphe. Cliquez ici pour le modifier et ajouter votre propre texte. C'est l'espace idéal pour raconter une histoire et vous présenter à vos visiteurs.</p>
+          <button class="button button-cv"><a href="Cv.html">Cv</a></button>
+          <button class="button button-projects"><a href="Project.html">Projects</a></button>
+          <button class="button button-contact"><a href="Contact.html">Contact</a></button>
+        </div>
+      </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-item">
+            <h3>Informations</h3>
+            <ul>
+                <li><strong>Adresse: </strong> 925, Hay El Ouahda, Ouarezazate</li>
+                <li><strong>Téléphone: </strong> 06 23 45 67 89</li>
+                <li><strong>Email: </strong> elkhyat.meryem1997@gmail.com</li>
+            </ul>
+        </div>
+        <div class="follow-me">
+            <h3>Suivez-moi:</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=100069230559769&mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/meryem.elkhyat?igsh=MXY4NGdqcW5jbDU3Nw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  // Sélection de l'icône du menu et du menu
+  var menuIcon = document.querySelector('.menu-icon');
+  var menu = document.querySelector('.nav');
+
+  // Écouteur d'événement pour le clic sur l'icône du menu
+  menuIcon.addEventListener('click', function() {
+    // Bascule la classe active pour afficher ou masquer le menu
+    menu.classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>

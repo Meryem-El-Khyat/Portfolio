@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+<style>
+    header {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .logo h1 {
+    margin: 0 40px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 200px;
+  }
+  
+  
+  .nav  li {
+    margin-left: 40px;
+  }
+  .nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    position: relative;
+  }
+  .nav li a:hover::after {
+      width: 100%;
+  }
+  .nav li a::after{
+      content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #333;
+    transition: width 0.3s ease;
+    margin: -5px 0;
+  }
+  footer {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 20px 0;
+    text-align: center; 
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligner les éléments en haut */
+  }
+  .footer-item {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .footer-item h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .footer-item strong{
+      font-size: 20px;
+  }
+  .footer-item ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .footer-item ul li {
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    
+  }
+  .footer-item ul li a {
+      color: #333;
+    text-decoration: none;
+  }
+  .follow-me{
+      flex: 1;
+  }
+  .follow-me h3{
+      font-size: 28px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  .follow-me ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .follow-me ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .follow-me ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 38px;
+  }
+  .follow-me ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-icon {
+    display: none; /* Masque l'icône par défaut */
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: -100px;
+        height: 100%;
+        max-width: 100px;
+        background-color: #f3f3f3;
+        transition: left 0.3s ease;
+      }
+      .nav ul {
+        padding: 20px;
+      }
+      .nav li {
+        margin-bottom: 15px;
+      }
+
+      .footer-content{
+        display: block;
+      }
+    .footer-item ul {
+      font-size: 16px;
+    }
+    .logo h1{
+        font-size: 26px;
+        
+      }
+      .nav {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+        cursor: pointer; 
+      }
+      .nav.active {
+        display: block;
+        margin-left: 355px;
+        background-color: transparent; 
+        margin-top: 30px; 
+      }
+    
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat ;
+}
+
+body{
+    font-family: montserrat ;
+    background: linear-gradient(#f5f5f5,#dfbce2,#f5f5f5);
+}
+
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: #eba8f3;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 5px;
+}
+
+.section-header p {
+  color:#4f4b4b ;
+}
+
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.contact-info {
+  width: 50%; 
+  
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  color: #e593ee;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color:#e593ee ;
+  font-size: 1.6em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #4f4b4b;
+  font-size: 1.2em;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  border-radius: 20px;
+}
+
+.contact-left{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        .contact-left-title h2{
+            font-weight: 600;
+            color: #eba8f3;
+            font-size: 35px;
+            margin-bottom: 2px;
+            margin-left: 40px;
+        }
+        .contact-left-title hr{
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: #eba8f3;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            margin-left: 40px;
+        }
+        .contact-inputs{
+            width: 300px;
+            height: 50px;
+            border: 2px solid #eba8f3;
+            outline: none;
+            padding-left: 25px;
+            margin-left: 40px;
+            font-weight: 500px;
+            color: #666;
+            border-radius: 15px;
+            
+        }
+        .contact-inputs:hover{
+          background-color: #dfbce2;
+          color: #fff;
+        }
+        .contact-left textarea{
+            height: 100px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+        .contact-inputs:focus{
+            border: 2px solid #eba8f3;
+        }
+        .contact-inputs::placeholder{
+            color: #a9a9a9;
+            font-size: 16px;
+        }
+        .contact-left button{
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            margin-bottom: 4px;
+            font-size: 16px ;
+            color: #fff;
+            gap: 10px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(270deg,#fccdc6,#eba8f3);
+            cursor: pointer;
+            margin-left: 140px;
+        }
+        
+
+        .contact-left button:hover{
+            background: #FFF;
+            color: #eba8f3;
+            border:2px solid #eba8f3;
+        }
+        
+ @media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 10px; 
+    padding-right: 10px; 
+  }
+  .row {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .contact-info {
+    width: 100%; 
+    max-width: none; 
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: none; 
+  }
+
+  .contact-left button {
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .contact-left-title h2 {
+    font-size: 2em; 
+    margin-left: 0; 
+    text-align: center; 
+  }
+  .contact-left-title hr {
+    margin-left: 0; 
+    margin-bottom: 10px; 
+  }
+  .contact-inputs {
+    width: 100%; /* Occuper toute la largeur disponible */
+    max-width: none; /* Ne pas limiter la largeur */
+    margin-left: 0; /* Réinitialiser la marge */
+  }
+}
+
+
+  </style>
+
+<body>
+    <header>
+        <div class="logo">
+          <h1>Meryem Elkhyat</h1>
+        </div>
+        
+        <nav>
+          <div class="menu-icon">
+            <!-- Insérez ici votre icône de menu (peut être une image ou une icône SVG) -->
+            <!-- Exemple d'utilisation d'une icône de hamburger -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </div>
+          
+          <ul class="nav">
+            <li><a href="Accueil.html"><h4>Accueil</h4></a></li>
+            <li><a href="Cv.html"><h4>Cv</h4></a></li>
+            <li><a href="Project.html"><h4>Projects</h4></a></li>
+            <li><a href="Contact.html"><h4>Contact</h4></a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main>
+        <section>
+    
+            <div class="section-header">
+              <div class="container">
+                <h2>Contactez-Nous</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+            
+            <div class="container">
+              <div class="row">
+                
+                <div class="contact-info">
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="fas fa-home"></i>
+                    </div>
+                    
+                    <div class="contact-info-content">
+                      <h4>Adresse</h4>
+                      <p>925, Hay El Ouahda,<br/> Ouarzazate</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    
+                    <div class="contact-info-content">
+                      <h4>Telephone</h4>
+                      <p>0624638603</p><br>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="contact-info-content">
+                      <h4>E-mail</h4>
+                     <p>Meryem.elkhyat@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                        <div class="contact-left-title">
+                            <h2>Entrer en Contact</h2>
+                            <hr>
+                        </div>
+                        <input type="hidden" name="access_key" value="093f6aec-48cd-480e-a390-caa8724db285">
+                        <input type="text" name="name" placeholder="Votre Nom" class="contact-inputs" required="true">
+                        <input type="email" name="email" placeholder="Votre E-mail" class="contact-inputs" required="true">
+                        <textarea name="message"  placeholder="Votre Message" class="contact-inputs" required="true"></textarea>
+                        <button type="sumbit">Envoyer</button>
+                    </form> 
+                </div>
+                
+              </div>
+            </div>
+          </section>
+        
+      </main>
+
+
+      <footer>
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3>Informations</h3>
+                <ul>
+                    <li><strong>Adresse: </strong> 925, Hay El Ouahda, Ouarezazate</li>
+                    <li><strong>Téléphone: </strong> 06 23 45 67 89</li>
+                    <li><strong>Email: </strong> elkhyat.meryem1997@gmail.com</li>
+                </ul>
+            </div>
+            <div class="follow-me">
+                <h3>Suivez-moi:</h3>
+                <ul>
+                  <li><a href="https://www.facebook.com/profile.php?id=100069230559769&mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/meryem.elkhyat?igsh=MXY4NGdqcW5jbDU3Nw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      // Sélection de l'icône du menu et du menu
+      var menuIcon = document.querySelector('.menu-icon');
+      var menu = document.querySelector('.nav');
+    
+      // Écouteur d'événement pour le clic sur l'icône du menu
+      menuIcon.addEventListener('click', function() {
+        // Bascule la classe active pour afficher ou masquer le menu
+        menu.classList.toggle('active');
+      });
+    });
+    </script>
+
+    
+</body>
+</html>

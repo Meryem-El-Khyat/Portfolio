@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Projects</title>
+</head>
+<style>
+    header {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .logo h1 {
+    margin: 0 40px;
+    font-size: 36px;
+    color: #333;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 200px;
+  }
+  
+  
+  .nav  li {
+    margin-left: 40px;
+  }
+  .nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    position: relative;
+  }
+  .nav li a:hover::after {
+      width: 100%;
+  }
+  .nav li a::after{
+      content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #333;
+    transition: width 0.3s ease;
+    margin: -5px 0;
+  }
+  footer {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 20px 0;
+    text-align: center; 
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligner les éléments en haut */
+  }
+  .footer-item {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .footer-item h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .footer-item strong{
+      font-size: 20px;
+  }
+  .footer-item ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .footer-item ul li {
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    
+  }
+  .footer-item ul li a {
+      color: #333;
+    text-decoration: none;
+  }
+  .follow-me{
+      flex: 1;
+  }
+  .follow-me h3{
+      font-size: 28px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  .follow-me ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .follow-me ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .follow-me ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 38px;
+  }
+  .follow-me ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-icon {
+    display: none; /* Masque l'icône par défaut */
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: -100px;
+        height: 100%;
+        max-width: 100px;
+        background-color: #f3f3f3;
+        transition: left 0.3s ease;
+      }
+      .nav ul {
+        padding: 20px;
+      }
+      .nav li {
+        margin-bottom: 15px;
+      }
+
+      .footer-content{
+        display: block;
+      }
+    .footer-item ul {
+      font-size: 16px;
+    }
+    .logo h1{
+        font-size: 26px;
+        
+      }
+      .nav {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+        cursor: pointer; 
+      }
+      .nav.active {
+        display: block;
+        margin-left: 355px;
+        background-color: transparent; 
+        margin-top: 30px; 
+      }
+    
+  }
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat ;
+}
+
+
+h1{
+    font-size: 88px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #a6aaaa;
+}
+.container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.lift{
+    width: 50%;
+}
+.lift img{
+    width:  400px;
+    height: 500px;
+    border-radius: 10%;
+    margin-left: 160px;
+    border: 4px solid #a6aaaa;
+    
+    
+}
+.rigth{
+    width: 100%;
+    padding-left: 30px;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: -50px;
+}
+.rigth h3{
+    font-size: 44px;
+    color: #a6aaaa;
+    margin-top: 30px;
+    padding: 25px;
+}
+.rigth p{
+    font-size: 20px;
+    color: #211f1f;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.button{
+    padding: 10px 15px;
+    border: 4px solid  #a6aaaa;
+    border-radius: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 180px;
+    height: 60px;
+
+}
+.button a{
+    text-decoration: none;
+    color: #5e716f;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .container{
+        display: block;
+        margin-bottom: 10px;
+    }
+            h1 {
+                font-size: 36px; 
+            }
+
+            .lift img {
+                width: 100%; 
+                height: auto; 
+                margin-left: 100px; 
+            }
+
+            .rigth {
+                margin-left: 0; 
+                margin-top: -20px; 
+            }
+
+            .rigth h3 {
+                font-size: 24px; 
+            }
+
+            .rigth p {
+                font-size: 14px; 
+                margin-bottom: 10px;
+                margin-top: 5px; 
+            }
+
+            .button {
+                padding: 6px 10px;
+                font-size: 16px; 
+                width: 120px; 
+                height: 40px; 
+                margin-bottom: 20px;
+            }
+            br{
+              display: none;
+            }
+        }
+
+      
+</style>
+<body>
+    <header>
+        <div class="logo">
+          <h1>Meryem Elkhyat</h1>
+        </div>
+        
+        <nav>
+          <div class="menu-icon">
+            <!-- Insérez ici votre icône de menu (peut être une image ou une icône SVG) -->
+            <!-- Exemple d'utilisation d'une icône de hamburger -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </div>
+          
+          <ul class="nav">
+            <li><a href="Accueil.html"><h4>Accueil</h4></a></li>
+            <li><a href="Cv.html"><h4>Cv</h4></a></li>
+            <li><a href="Project.html"><h4>Projects</h4></a></li>
+            <li><a href="Contact.html"><h4>Contact</h4></a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main>
+
+        <h1>Projects</h1><br>
+    <div class="container">
+        <div class="lift">
+            <img src="images/moyenne.jpg" alt="">
+        </div>
+        <div class="rigth">
+            <h3>Calculer la Moyenne des Stagieres</h3>
+            <p>L'Application de Calcul de Moyenne des Stagiaires est un outil interactif conçu pour simplifier le processus de calcul des moyennes de stage pour les équipes de formation et les gestionnaires de stages. Cette application web intuitive permet aux utilisateurs d'entrer les notes des stagiaires dans différents domaines et de calculer automatiquement leur moyenne.</p>
+            <button class="button"><a href=" https://meryem-el-khyat.github.io/moyenne-stagiaire/">Voir ça</a></button>
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="rigth">
+            <h3>Site Ecommerce</h3>
+            <p>L'Application de Site E-commerce pour Produits Bébés est une plateforme en ligne dédiée à la vente de produits essentiels et innovants pour les nourrissons et les jeunes enfants. Conçue pour offrir aux parents une expérience d'achat pratique et sécurisée, cette application propose une large gamme de produits de qualité pour répondre aux besoins des tout-petits.</p>
+            <button class="button"><a href=" https://meryem-el-khyat.github.io/eco/">Voir ça</a></button>
+        </div>
+        <div class="lift">
+            <img src="images/bebe.jpg" alt="">
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="lift">
+            <img src="images/QUIZ.jpeg" alt="">
+        </div>
+        <div class="rigth">
+            <h3>Quiz des Enfants</h3>
+            <p>L'Application de Quiz pour Enfants est une plateforme ludique et éducative conçue pour divertir et stimuler les enfants tout en renforçant leurs connaissances. Cette application propose une variété de questions amusantes et éducatives, accompagnées de réponses interactives pour encourager l'apprentissage actif.</p>
+            <button class="button"><a href=" https://meryem-el-khyat.github.io/quiz-enfants/ ">Voir ça</a></button>
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="rigth">
+            <h3>Calculatrice</h3>
+            <p>Dans ce guide, nous allons explorer les étapes pour créer une calculatrice basique en utilisant les langages de programmation web : HTML, CSS et JavaScript. Cette calculatrice permettra aux utilisateurs d'effectuer des opérations mathématiques simples comme l'addition, la soustraction, la multiplication et la division.</p>
+            <button class="button"><a href="https://meryem-el-khyat.github.io/calculat/">Voir ça</a></button>
+        </div>
+        <div class="lift">
+            <img src="images/calcule.jpg" alt="">
+        </div>
+    </div><br>
+
+      </main>
+
+
+      <footer>
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3>Informations</h3>
+                <ul>
+                    <li><strong>Adresse: </strong> 925, Hay El Ouahda, Ouarezazate</li>
+                    <li><strong>Téléphone: </strong> 06 23 45 67 89</li>
+                    <li><strong>Email: </strong> elkhyat.meryem1997@gmail.com</li>
+                </ul>
+            </div>
+            <div class="follow-me">
+                <h3>Suivez-moi:</h3>
+                <ul>
+                  <li><a href="https://www.facebook.com/profile.php?id=100069230559769&mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/meryem.elkhyat?igsh=MXY4NGdqcW5jbDU3Nw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      // Sélection de l'icône du menu et du menu
+      var menuIcon = document.querySelector('.menu-icon');
+      var menu = document.querySelector('.nav');
+    
+      // Écouteur d'événement pour le clic sur l'icône du menu
+      menuIcon.addEventListener('click', function() {
+        // Bascule la classe active pour afficher ou masquer le menu
+        menu.classList.toggle('active');
+      });
+    });
+    </script>
+
+    
+</body>
+</html>

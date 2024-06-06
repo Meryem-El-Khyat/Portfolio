@@ -1,0 +1,337 @@
+body {
+    font-family: montserrat ;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+  }
+  .profile-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+  }
+  .profile-photo {
+    width: 50%;
+  }
+  .profile-photo img {
+    width:  500px;
+    height: 500px;
+    border-radius: 30%;
+    /*filter: grayscale(100%);*/
+    margin-left: 40px;
+  }
+  .profile-content {
+    width: 50%;
+    padding-left: 50px;
+  }
+  .profile-content h1 {
+    font-size: 100px;
+    margin-top: 20px;
+    
+  }
+  .profile-content h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 30px;
+    
+  }
+  .profile-content p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  .button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 40px;
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 170px;
+    height: 150px;
+    font-family: montserrat ;
+  }
+  .button a{
+    text-decoration: none;
+    color: #333;
+    font-size: 45px;
+  }
+  .button:hover{
+    background-color: #fff;
+  }
+  .button-cv  { background-color: #B0CFD3; }
+  .button-cv:hover{
+    border: 4px solid #B0CFD3;
+  }
+  .button-cv a:hover{
+    color: #B0CFD3;
+  }
+
+  .button-projects { 
+    background-color: #a6aaaa;}
+  .button-projects:hover{
+    border: 4px solid #a6aaaa;
+  }
+  .button-projects a:hover{
+    color: #a6aaaa;
+  }
+
+  .button-contact { background-color: #dfbce2; }
+  .button-contact:hover{
+    border: 4px solid #dfbce2;
+  }
+  .button-contact a:hover{
+    color: #dfbce2;
+  }
+
+  header {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .logo h1 {
+    margin: 0 40px;
+    font-size: 40px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 200px;
+  }
+  
+  
+  .nav  li {
+    margin-left: 40px;
+  }
+  .nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    position: relative;
+  }
+  .nav li a:hover::after {
+      width: 100%;
+  }
+  .nav li a::after{
+      content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #333;
+    transition: width 0.3s ease;
+    margin: -5px 0;
+  }
+  footer {
+    background:linear-gradient(#B0CFD3,#dfbce2,#ced6d5) ;
+    color: #333;
+    padding: 20px 0;
+    text-align: center; 
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligner les éléments en haut */
+  }
+  .footer-item {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .footer-item h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .footer-item strong{
+      font-size: 22px;
+  }
+  .footer-item ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .footer-item ul li {
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    
+  }
+  .footer-item ul li a {
+      color: #333;
+    text-decoration: none;
+  }
+  .follow-me{
+      flex: 1;
+  }
+  .follow-me h3{
+      font-size: 34px;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+  .follow-me ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .follow-me ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .follow-me ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 38px;
+  }
+  .follow-me ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-icon {
+    display: none; /* Masque l'icône par défaut */
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-photo img {
+      width: 220px;
+      height: 220px;
+      margin: 20px -20px;
+      
+    }
+    .profile-content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+      
+      .follow-me h3{
+        font-size: 30px;
+      }
+    .profile-content h1 {
+      font-size: 58px;
+    }
+    .profile-content h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .profile-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+     .button{
+        padding: 10px 15px;
+    border: none;
+    border-radius: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 120px;
+    height: 120px;
+    }
+    .button a{
+        font-size: 30px;
+    }
+    header {
+        padding: 10px;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: -100px;
+        height: 100%;
+        max-width: 100px;
+        background-color: #f3f3f3;
+        transition: left 0.3s ease;
+      }
+      .nav ul {
+        padding: 20px;
+      }
+      
+      .nav li {
+        margin-bottom: 15px;
+      }
+
+      .footer-content{
+        display: block;
+      }
+    .footer-item ul {
+      font-size: 16px;
+    }
+    .logo h1{
+        font-size: 26px;
+        
+      }
+      
+      .nav {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+        cursor: pointer; 
+      }
+      .nav.active {
+        display: block;
+        margin-left: 355px;
+        background-color: transparent; 
+        margin-top: 30px; 
+      }
+    
+  }
+  
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile-content h1 {
+  font-size: 100px;
+  margin-top: 20px;
+  animation: bounce 2s infinite; /* Animation de rebondissement pendant 2 secondes en boucle */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.profile-photo img {
+  width: 500px;
+  height: 500px;
+  border-radius: 30%;
+  margin-left: 40px;
+  animation: fadeIn 1.5s ease-in-out; /* Apparaître en 1.5 secondes avec un effet d'accélération/décélération */
+}
+
+
+  
